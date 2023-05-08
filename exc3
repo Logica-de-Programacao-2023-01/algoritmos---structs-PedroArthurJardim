@@ -1,0 +1,33 @@
+//Crie uma struct chamada Aluno com os campos "nome"
+//,
+//"idade" e "notas". O campo
+//"notas" deve ser um slice de float64. Escreva uma função que receba um Aluno como
+//parâmetro e calcule a média das suas notas.
+
+package main
+
+import "fmt"
+
+type Aluno struct {
+	nome  string
+	idade int
+	notas []float64
+}
+
+func media(N Aluno) float64 {
+	var soma float64
+	var total float64
+	var media float64
+	for i := 0; i < len(N.notas); i++ {
+		soma += float64(i)
+		total++
+	}
+	media = soma / total
+	return media
+}
+func main() {
+	var aluno Aluno
+	fmt.Print("Nome: ")
+	fmt.Scan(&aluno.nome)
+
+}

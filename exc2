@@ -1,0 +1,31 @@
+//Crie uma struct chamada Livro com os campos "título"
+//,
+//"autor" e "ano de publicação".
+//Escreva uma função que receba um Livro como parâmetro e imprima suas informações.
+
+package main
+
+import "fmt"
+
+type Livro struct {
+	titulo        string
+	autor         string
+	anoPublicacao int
+}
+
+func infLivro(L Livro) {
+	fmt.Println("titulo: ", L.titulo)
+	fmt.Println("autor: ", L.autor)
+	fmt.Println("anoPublicacao: ", L.anoPublicacao)
+}
+func main() {
+	var lista Livro
+	fmt.Print(" Informe o titulo: ")
+	fmt.Scan(&lista.titulo)
+	fmt.Print(" Informe o autor: ")
+	fmt.Scan(&lista.autor)
+	fmt.Print(" Informe o ano de publicação: ")
+	fmt.Scan(&lista.anoPublicacao)
+
+	infLivro(lista)
+}

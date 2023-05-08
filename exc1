@@ -1,0 +1,27 @@
+//Crie uma struct chamada Retângulo com os campos "largura" e "altura". Escreva uma
+//função que receba um Retângulo como parâmetro e calcule a área do retângulo (área =
+//largura * altura).
+
+package main
+
+import "fmt"
+
+type Retangulo struct {
+	altura  float64
+	largura float64
+}
+
+func calcArea(retangulo Retangulo) float64 {
+	return retangulo.largura * retangulo.altura
+}
+
+func main() {
+	var area Retangulo
+	fmt.Print("Informe a altura retangulo ")
+	fmt.Scan(&area.altura)
+	fmt.Print("Informe a largura retangulo ")
+	fmt.Scan(&area.largura)
+
+	fmt.Print("A area do retangulo é: ", calcArea(area))
+
+}
